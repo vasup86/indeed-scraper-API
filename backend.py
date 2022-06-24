@@ -56,7 +56,7 @@ class Backend:
         ul = soup.find('ul', class_='jobsearch-ResultsList')
         li = ul.find_all('li')  #basic class name for each job post shell
         print(len(li))
-        
+        i = 1
         for item in li:
             if item is None:
                 continue
@@ -112,6 +112,7 @@ class Backend:
                     date = ""
 
                 job = {
+                    'key':i,
                     'title': title,
                     'company': company,
                     'location':location,
@@ -122,6 +123,7 @@ class Backend:
                     "date":date
                 }
                 #print(job)
+                i+=1
                 self.joblist.append(job)
 
             except:
