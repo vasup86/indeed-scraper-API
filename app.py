@@ -13,11 +13,12 @@ def add_data():
     title = request.json['title']
     location = request.json['location']
     pages = request.json['pages']
+    country = request.json['country']
     distance = request.json['distance']
     date = request.json['date']
 
     #processing data
-    dataObject = backend.Backend(title, location, pages, distance, date)
+    dataObject = backend.Backend(title, location, pages,country, distance, date)
     data = dataObject.scrape()
     #print(data)
     return jsonify(results = data)

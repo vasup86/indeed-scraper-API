@@ -3,16 +3,17 @@ from bs4 import BeautifulSoup as BS
 
 class Backend:
 
-    def __init__(self, title, location, pages, distance, date):
+    def __init__(self, title, location, pages,country, distance, date):
         self.title = title
         self.location = location
         self.pages = int(pages)
+        self.country = country
         self.distance = distance
         self.date = date
         self.joblist = []
 
     def scrape(self):
-        url = 'https://ca.indeed.com/jobs?q='
+        url = f'https://{self.country}.indeed.com/jobs?q='
         combUrl = url + (self.title.replace(" ", "+")) + "&l=" + (self.location.replace(", ", "%2C%20"))
 
         if(self.distance== "Distance in KM" and self.date == 'D'):   #neither is selected
