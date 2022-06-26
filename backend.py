@@ -56,14 +56,15 @@ class Backend:
     def transform(self, soup):
         ul = soup.find('ul', class_='jobsearch-ResultsList')
         li = ul.find_all('li')  #basic class name for each job post shell
-        print(len(li))
+        #print(len(li))
         i = 1
         for item in li:
             if item is None:
                 continue
             try:
                 #title = item.find('a').text.strip()  #class title, is an 'a' tag, and has title as text
-                title = item.find('h2', class_="jobTitle").text.strip("new") #class jobTitle, is an 'h2' tag, and has title as text
+                partTitle = item.find('h2', class_="jobTitle") #.text.strip("new")  #class jobTitle, is an 'h2' tag, and has title as text
+                title = partTitle.find('a').text
                 #print(title)
 
                 company = item.find("span", class_="companyName").text.strip()
@@ -75,10 +76,10 @@ class Backend:
                     jobType = item.find_all("div", class_="attribute_snippet")
                     if(len(jobType) == 1):
                         jobType = jobType[0].text.strip()
-                        print(jobType)
+                        # print(jobType)
                     else:
                         jobType = jobType[1].text.strip()
-                        print(jobType)
+                        # print(jobType)
                 except:
                     jobType = ""
 
@@ -94,7 +95,7 @@ class Backend:
                 
                 try:
                     href = item.find('a').attrs["data-jk"]
-                    link = (f'https://ca.indeed.com/viewjob?jk={href}')
+                    link = (f'https://{self.country}.indeed.com/viewjob?jk={href}')
                 except:
                     link = ""
                 
