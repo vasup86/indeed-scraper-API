@@ -21,7 +21,6 @@ headers: {'Content-Type':"application/json"}<br>
 [3] pages (int): No of pages worth of job listings user wants to scrape. 1 page contains 15 job positings.<br>
 [4] country: ISO country code (for united states, use 'www' instead of 'us').  Ex: Canada: ca.<br>
 [5] distance:  Job search radius based on input location.
-	
  - Default (no distance): 'Distance in KM'
  - Exact: 'exact'
  - 5 KM : '5'
