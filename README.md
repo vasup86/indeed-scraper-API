@@ -39,6 +39,7 @@ headers: {'Content-Type':"application/json"}<br>
  - 14 days: '14'
  
 Ex:
+```
 {
 	"title":  "software developer",
 	"location":  "Toronto",
@@ -47,8 +48,9 @@ Ex:
 	"distance": "Distance in KM",
 	"date" : "14",
 }
-
+```
 Ex:
+```
 {
 	"title":  "baker",
 	"location":  "new york",
@@ -57,7 +59,7 @@ Ex:
 	"distance": "10",
 	"date" : "D,
 }
-
+```
 ### GET (return)
 The API will return an JSON object with array of objects containing each job posting as an object. 
 Each job lisiting object contains: key <sup>[1]</sup>, title <sup>[2]</sup>, company <sup>[3]</sup>, location <sup>[4]</sup>, type <sup>[5]</sup>, salary <sup>[6]</sup>, job link <sup>[7]</sup>, summary <sup>[8]</sup> and date <sup>[9]</sup>.
@@ -73,19 +75,32 @@ Each job lisiting object contains: key <sup>[1]</sup>, title <sup>[2]</sup>, com
  - [9] date: when it was posted such as 1 day ago, 2 days ago, 30+ days,..
 
 ex: 
+```
 {
 "result": [
 	{
-	"key": 1,
-	"title":"software developer",
-	"company":"CIBC",
-	"location": "Toronto, ON",
-	"type":"full-time",
-	"salary": "",
-	"jobLink":"
-	}
+		"key": 1,
+		"title":"Bread Baker",
+		"company":"Forno Cultura",
+		"location": "Toronto, ON",
+		"type":"full-time",
+		"salary": "$42,000–$48,000 a year",
+		"date":"",
+		"jobLink":"https://ca.indeed.com/viewjob?jk=2bf8b793b6662d31"
+	}, 
+	{
+		"key": 2,
+		"title":"Baker",
+		"company":""Phipps Desserts"",
+		"location": "Toronto, ON",
+		"type":"full-time",
+		"salary": "From $16.50 an hour",
+		"date": "4 days ago",
+		"jobLink":"https://ca.indeed.com/viewjob?jk=621fb0c19055bb94"
+	},
+	...
 
 ]
 }
-
+```
 ![image](https://user-images.githubusercontent.com/83378929/175841388-fbfbef12-c083-4395-ab60-362fbcb28aed.png)
