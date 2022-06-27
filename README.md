@@ -100,7 +100,7 @@ ex:
 	},
 	...
 
-]
+   ]
 }
 ```
 ![image](https://user-images.githubusercontent.com/83378929/175841388-fbfbef12-c083-4395-ab60-362fbcb28aed.png)
