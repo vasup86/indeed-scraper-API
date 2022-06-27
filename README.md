@@ -32,11 +32,7 @@ headers: {'Content-Type':"application/json"}<br>
 
 [6] date: When the job listing was posted, ex: 3 days will show only job listings posted in last 3 days.<br>
  - Default (no preference): 'D'
-<<<<<<< HEAD
  - 24 hrs : '24'
-=======
- -  24 hrs : '24'
->>>>>>> fd44591d9bc6947b753d2a7207becd146c836ce5
  - 3 days: '3'
  - 7 days: '7'
  - 14 days: '14'
