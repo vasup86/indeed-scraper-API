@@ -45,7 +45,7 @@ Ex:
 	"pages":  2,
 	"country":  "ca",
 	"distance": "Distance in KM",
-	"date" : "14",
+	"date" : "14"
 }
 ```
 Ex:
@@ -56,7 +56,7 @@ Ex:
 	"pages":  1,
 	"country":  "www",
 	"distance": "10",
-	"date" : "D,
+	"date" : "D
 }
 ```
 ### GET (return)
